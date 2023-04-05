@@ -1,4 +1,5 @@
 import { Image, Text, TouchableOpacity, View } from 'react-native';
+import { Button } from '../components/Button';
 
 export const Details = ({ navigation, route }) => {
   const { product, image, date, points } = route.params;
@@ -74,21 +75,7 @@ export const Details = ({ navigation, route }) => {
         <Text style={{ fontSize: 24, fontWeight: 800, marginBottom: 47 }}>
           {points.toLocaleString()} puntos
         </Text>
-        <TouchableOpacity
-          onPress={() => navigation.navigate('Home')}
-          style={{
-            width: '100%',
-            height: 50,
-            backgroundColor: '#334FFA',
-            borderRadius: 10,
-            justifyContent: 'center',
-            alignItems: 'center',
-          }}
-        >
-          <Text style={{ color: 'white', fontSize: 12, fontWeight: '800' }}>
-            Canjeados
-          </Text>
-        </TouchableOpacity>
+        <Button title='Aceptar' onPress={() => navigation.navigate('Home')} />
       </View>
     </View>
   );

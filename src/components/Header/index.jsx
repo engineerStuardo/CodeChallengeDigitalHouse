@@ -1,4 +1,6 @@
-import { StyleSheet, Text, View } from 'react-native';
+import { Text, View } from 'react-native';
+
+import { styles } from './styles';
 
 export const Header = () => {
   return (
@@ -8,10 +10,3 @@ export const Header = () => {
     </View>
   );
 };
-
-const styles = StyleSheet.create({
-  title: {
-    fontSize: 16,
-    fontWeight: 800,
-  },
-});

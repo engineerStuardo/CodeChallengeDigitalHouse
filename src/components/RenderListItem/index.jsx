@@ -1,6 +1,8 @@
-import { Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
-import { toLongDate } from '../utils/DateUtils';
+import { Image, Text, TouchableOpacity, View } from 'react-native';
+import { toLongDate } from '../../utils/DateUtils';
 import { useNavigation } from '@react-navigation/native';
+
+import { styles } from './styles';
 
 export const RenderListItem = ({
   product,
@@ -38,53 +40,10 @@ export const RenderListItem = ({
         </Text>
         <Text>{points.toLocaleString()}</Text>
         <Image
-          source={require('../../assets/Subtract.png')}
+          source={require('../../../assets/Subtract.png')}
           style={styles.arrowRight}
         />
       </View>
     </TouchableOpacity>
   );
 };
-
-const styles = StyleSheet.create({
-  card: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'space-between',
-    height: 70,
-    paddingRight: 10,
-    paddingLeft: 10,
-    paddingTop: 23,
-  },
-  pointContainer: {
-    flexDirection: 'row',
-    alignItems: 'center',
-  },
-  red: {
-    color: '#FF0000',
-    fontWeight: 800,
-  },
-  green: {
-    color: '#00B833',
-    fontWeight: 800,
-  },
-  leftContainer: {
-    flexDirection: 'row',
-    alignItems: 'center',
-  },
-  image: {
-    width: 55,
-    height: 55,
-    borderRadius: 10,
-    marginRight: 11,
-  },
-  arrowRight: {
-    width: 10,
-    height: 10,
-    marginLeft: 23,
-  },
-  product: {
-    fontWeight: '800',
-    width: 175,
-  },
-});

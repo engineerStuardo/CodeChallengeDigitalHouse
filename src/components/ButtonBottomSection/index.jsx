@@ -1,5 +1,7 @@
-import { StyleSheet, View } from 'react-native';
-import { Button } from './Button';
+import { View } from 'react-native';
+import { Button } from '../Button';
+
+import { styles } from './styles';
 
 export const ButtonBottomSection = ({ filter, showAll }) => {
   return (
@@ -15,11 +17,3 @@ export const ButtonBottomSection = ({ filter, showAll }) => {
     </View>
   );
 };
-
-const styles = StyleSheet.create({
-  container: {
-    flexDirection: 'row',
-    marginTop: 43,
-    justifyContent: 'space-between',
-  },
-});

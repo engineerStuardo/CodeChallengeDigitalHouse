@@ -1,6 +1,7 @@
 import { FlatList, StyleSheet, Text, View } from 'react-native';
 
-import { RenderListItem } from './RenderListItem';
+import { RenderListItem } from '../RenderListItem';
+import { styles } from './styles';
 
 export const MovementSection = ({ filteredProducts }) => {
   return (
@@ -23,18 +24,3 @@ export const MovementSection = ({ filteredProducts }) => {
     </View>
   );
 };
-
-const styles = StyleSheet.create({
-  list: {
-    height: 360,
-    backgroundColor: '#fff',
-    borderRadius: 10,
-  },
-  title: {
-    fontSize: 14,
-    fontWeight: '800',
-    color: '#9B9898',
-    marginBottom: 20,
-    marginTop: 20,
-  },
-});

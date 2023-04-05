@@ -12,6 +12,7 @@ import {
 
 export const Home = ({ navigation }) => {
   const [products, setProducts] = useState([]);
+  const [filteredProducts, setFilteredProducts] = useState([]);
   const [totalPoints, setTotalPoints] = useState(0);
   const [showAll, setShowAll] = useState(false);
 
@@ -21,6 +22,7 @@ export const Home = ({ navigation }) => {
         'https://6222994f666291106a29f999.mockapi.io/api/v1/products'
       );
       setProducts(data);
+      setFilteredProducts(data);
     } catch (error) {
       console.log(error);
     }
@@ -60,12 +62,31 @@ export const Home = ({ navigation }) => {
   }
 
   const calculateTotalPoints = () => {
-    const total = products.reduce(
-      (accumulator, currentValue) => accumulator + currentValue.points,
-      0
-    );
+    const total = products.reduce((accumulator, currentValue) => {
+      if (currentValue.is_redemption) {
+        return accumulator;
+      }
+      return accumulator + currentValue.points;
+    }, 0);
 
     setTotalPoints(total);
+  };
+
+  const filter = type => {
+    if (type === 'Ganados') {
+      setFilteredProducts(products.filter(item => !item.is_redemption));
+      setShowAll(true);
+      return;
+    }
+
+    if (type === 'Canjeados') {
+      setFilteredProducts(products.filter(item => item.is_redemption));
+      setShowAll(true);
+      return;
+    }
+
+    setShowAll(false);
+    setFilteredProducts(products);
   };
 
   return (
@@ -115,7 +136,7 @@ export const Home = ({ navigation }) => {
               Diciembre
             </Text>
             <Text style={{ color: '#fff', fontSize: 32, fontWeight: 800 }}>
-              {totalPoints} pts
+              {totalPoints.toLocaleString()} pts
             </Text>
           </View>
         </View>
@@ -135,11 +156,18 @@ export const Home = ({ navigation }) => {
         </Text>
         <FlatList
           style={styles.list}
-          data={products}
+          data={filteredProducts}
           renderItem={({ item }) => (
             <TouchableOpacity
               style={styles.card}
-              onPress={() => navigation.navigate('Details')}
+              onPress={() =>
+                navigation.navigate('Details', {
+                  product: item.product,
+                  image: item.image,
+                  date: toLongDate(item.createdAt),
+                  points: item.points,
+                })
+              }
             >
               <View style={{ flexDirection: 'row', alignItems: 'center' }}>
                 <Image
@@ -152,7 +180,12 @@ export const Home = ({ navigation }) => {
                   }}
                 />
                 <View>
-                  <Text style={{ fontWeight: '800' }}>{item.product}</Text>
+                  <Text
+                    style={{ fontWeight: '800', width: 175 }}
+                    numberOfLines={1}
+                  >
+                    {item.product}
+                  </Text>
                   <Text>{toLongDate(item.createdAt)}</Text>
                 </View>
               </View>
@@ -160,7 +193,7 @@ export const Home = ({ navigation }) => {
                 <Text style={item.is_redemption ? styles.red : styles.green}>
                   {item.is_redemption ? '-' : '+'}
                 </Text>
-                <Text>{item.points}</Text>
+                <Text>{item.points.toLocaleString()}</Text>
                 <Image
                   source={require('../../assets/Subtract.png')}
                   style={{ width: 10, height: 10, marginLeft: 23 }}
@@ -181,6 +214,7 @@ export const Home = ({ navigation }) => {
       >
         {showAll ? (
           <TouchableOpacity
+            onPress={() => filter('Todos')}
             style={{
               width: '100%',
               height: 50,
@@ -197,6 +231,7 @@ export const Home = ({ navigation }) => {
         ) : (
           <>
             <TouchableOpacity
+              onPress={() => filter('Ganados')}
               style={{
                 width: 170,
                 height: 50,
@@ -211,6 +246,7 @@ export const Home = ({ navigation }) => {
               </Text>
             </TouchableOpacity>
             <TouchableOpacity
+              onPress={() => filter('Canjeados')}
               style={{
                 width: 170,
                 height: 50,

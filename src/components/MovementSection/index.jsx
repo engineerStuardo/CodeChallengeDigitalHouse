@@ -14,6 +14,7 @@ export const MovementSection = ({ filteredProducts }) => {
         data={filteredProducts}
         renderItem={({ item }) => (
           <RenderListItem
+            key={item.id}
             product={item.product}
             image={item.image}
             createdAt={item.createdAt}
@@ -21,7 +22,7 @@ export const MovementSection = ({ filteredProducts }) => {
             isRedemption={item.is_redemption}
           />
         )}
-        keyExtractor={item => item.id}
+        keyExtractor={item => `${item.id}`}
       />
     </View>
   );

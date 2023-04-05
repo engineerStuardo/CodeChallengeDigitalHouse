@@ -56,4 +56,7 @@ export const styles = StyleSheet.create({
     fontWeight: 800,
     marginBottom: 47,
   },
+  subtitleMarginBottom: {
+    marginBottom: 19,
+  },
 });

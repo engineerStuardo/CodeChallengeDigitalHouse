@@ -1,3 +1,4 @@
+import React from 'react';
 import { Image, Text, TouchableOpacity, View } from 'react-native';
 import { toLongDate } from '../../utils/DateUtils';
 import { useNavigation } from '@react-navigation/native';
@@ -15,6 +16,7 @@ export const RenderListItem = ({
 
   return (
     <TouchableOpacity
+      testID='item-card'
       style={styles.card}
       onPress={() =>
         navigation.navigate('Details', {
@@ -40,6 +42,7 @@ export const RenderListItem = ({
         </Text>
         <Text>{points.toLocaleString()}</Text>
         <Image
+          testID='arrow-image'
           source={require('../../../assets/Subtract.png')}
           style={styles.arrowRight}
         />

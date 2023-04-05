@@ -1,4 +1,5 @@
-import { FlatList, StyleSheet, Text, View } from 'react-native';
+import React from 'react';
+import { FlatList, Text, View } from 'react-native';
 
 import { RenderListItem } from '../RenderListItem';
 import { styles } from './styles';
@@ -8,6 +9,7 @@ export const MovementSection = ({ filteredProducts }) => {
     <View>
       <Text style={styles.title}>TUS MOVIMIENTOS</Text>
       <FlatList
+        testID='movement-list'
         style={styles.list}
         data={filteredProducts}
         renderItem={({ item }) => (

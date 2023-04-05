@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1680717388452" clover="3.2.0">
+  <project timestamp="1680717388453" name="All files">
+    <metrics statements="31" coveredstatements="31" conditionals="9" coveredconditionals="9" methods="13" coveredmethods="13" elements="53" coveredelements="53" complexity="0" loc="31" ncloc="31" packages="8" files="14" classes="14"/>
+    <package name="assets">
+      <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="Subtract.png" path="/Users/Stuardo/workspace/ReactNative/CodeChallengeDigitalHouse/assets/Subtract.png">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="2" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.components.Button">
+      <metrics statements="3" coveredstatements="3" conditionals="3" coveredconditionals="3" methods="1" coveredmethods="1"/>
+      <file name="index.jsx" path="/Users/Stuardo/workspace/ReactNative/CodeChallengeDigitalHouse/src/components/Button/index.jsx">
+        <metrics statements="2" coveredstatements="2" conditionals="3" coveredconditionals="3" methods="1" coveredmethods="1"/>
+        <line num="7" count="2" type="cond" truecount="1" falsecount="0"/>
+        <line num="8" count="10" type="stmt"/>
+      </file>
+      <file name="styles.js" path="/Users/Stuardo/workspace/ReactNative/CodeChallengeDigitalHouse/src/components/Button/styles.js">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="3" count="2" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.components.ButtonBottomSection">
+      <metrics statements="6" coveredstatements="6" conditionals="2" coveredconditionals="2" methods="4" coveredmethods="4"/>
+      <file name="index.jsx" path="/Users/Stuardo/workspace/ReactNative/CodeChallengeDigitalHouse/src/components/ButtonBottomSection/index.jsx">
+        <metrics statements="5" coveredstatements="5" conditionals="2" coveredconditionals="2" methods="4" coveredmethods="4"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="8" count="3" type="stmt"/>
+        <line num="14" count="1" type="stmt"/>
+        <line num="21" count="1" type="stmt"/>
+        <line num="27" count="1" type="stmt"/>
+      </file>
+      <file name="styles.js" path="/Users/Stuardo/workspace/ReactNative/CodeChallengeDigitalHouse/src/components/ButtonBottomSection/styles.js">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="3" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.components.Header">
+      <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <file name="index.jsx" path="/Users/Stuardo/workspace/ReactNative/CodeChallengeDigitalHouse/src/components/Header/index.jsx">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="7" count="2" type="stmt"/>
+      </file>
+      <file name="styles.js" path="/Users/Stuardo/workspace/ReactNative/CodeChallengeDigitalHouse/src/components/Header/styles.js">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="3" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.components.MovementSection">
+      <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
+      <file name="index.jsx" path="/Users/Stuardo/workspace/ReactNative/CodeChallengeDigitalHouse/src/components/MovementSection/index.jsx">
+        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="8" count="1" type="stmt"/>
+        <line num="16" count="2" type="stmt"/>
+        <line num="24" count="2" type="stmt"/>
+      </file>
+      <file name="styles.js" path="/Users/Stuardo/workspace/ReactNative/CodeChallengeDigitalHouse/src/components/MovementSection/styles.js">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="3" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.components.RenderListItem">
+      <metrics statements="5" coveredstatements="5" conditionals="4" coveredconditionals="4" methods="2" coveredmethods="2"/>
+      <file name="index.jsx" path="/Users/Stuardo/workspace/ReactNative/CodeChallengeDigitalHouse/src/components/RenderListItem/index.jsx">
+        <metrics statements="4" coveredstatements="4" conditionals="4" coveredconditionals="4" methods="2" coveredmethods="2"/>
+        <line num="8" count="2" type="stmt"/>
+        <line num="15" count="3" type="stmt"/>
+        <line num="17" count="3" type="stmt"/>
+        <line num="22" count="1" type="stmt"/>
+      </file>
+      <file name="styles.js" path="/Users/Stuardo/workspace/ReactNative/CodeChallengeDigitalHouse/src/components/RenderListItem/styles.js">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="3" count="2" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.components.TotalPointsSection">
+      <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <file name="index.jsx" path="/Users/Stuardo/workspace/ReactNative/CodeChallengeDigitalHouse/src/components/TotalPointsSection/index.jsx">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="7" count="1" type="stmt"/>
+      </file>
+      <file name="styles.js" path="/Users/Stuardo/workspace/ReactNative/CodeChallengeDigitalHouse/src/components/TotalPointsSection/styles.js">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="3" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.utils">
+      <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <file name="DateUtils.js" path="/Users/Stuardo/workspace/ReactNative/CodeChallengeDigitalHouse/src/utils/DateUtils.js">
+        <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="1" count="2" type="stmt"/>
+        <line num="2" count="4" type="stmt"/>
+        <line num="3" count="4" type="stmt"/>
+        <line num="17" count="4" type="stmt"/>
+        <line num="21" count="4" type="stmt"/>
+      </file>
+    </package>
+  </project>
+</coverage>
